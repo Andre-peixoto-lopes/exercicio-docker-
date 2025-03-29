@@ -61,6 +61,12 @@ docker run -d --rm -p 27018:27017 --name mongo20 --network mongoCluster mongodb/
 docker run -d --rm -p 27019:27017 --name mongo30 --network mongoCluster mongodb/mongodb-community-server:latest --replSet myReplicaSet --bind_ip localhost,mongo30
 ```
 
+### Nó 4
+
+```bash
+docker run -d --rm -p 27020:27017 --name mongo40 --network mongoCluster mongodb/mongodb-community-server:latest --replSet myReplicaSet --bind_ip localhost,mongo40
+```
+
 ---
 
 ## 📌 Passo 3 - Configurar o Replica Set
@@ -85,7 +91,8 @@ rs.initiate({
   members: [
     {_id: 0, host: "mongo10"},
     {_id: 1, host: "mongo20"},
-    {_id: 3, host: "mongo30"}
+    {_id: 3, host: "mongo30"},
+    {_id: 4, host: "mongo40"}
   ]
 })
 ```
