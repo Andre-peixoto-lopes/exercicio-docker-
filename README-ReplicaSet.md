@@ -224,5 +224,5 @@ Este exercício demonstra como o Replica Set do MongoDB garante **alta disponibi
 ### 📄 Requisitos
 
 - Docker instalado
-- MongoDB Compass (opcional)
+- MongoDB Compass instalado
 - Conhecimentos básicos de terminal
